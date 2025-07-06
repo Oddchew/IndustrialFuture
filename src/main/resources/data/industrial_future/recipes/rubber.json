@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": {
+    "item": "industrial_future:raw_rubber"
+  },
+  "result": "industrial_future:rubber",
+  "experience": 0.3,
+  "cookingtime": 200
+}

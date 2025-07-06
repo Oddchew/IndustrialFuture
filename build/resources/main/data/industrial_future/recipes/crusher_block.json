@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "mechanism",
+  "pattern": [
+    "CIC",
+    "IDI",
+    "RBR"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "D": {
+      "item": "minecraft:iron_block"
+    },
+    "B": {
+      "item": "industrial_future:battery"
+    },
+    "C": {
+      "item": "industrial_future:copper_cable"
+    }
+  },
+  "result": {
+    "item": "industrial_future:crusher",
+    "count": 1
+  }
+}

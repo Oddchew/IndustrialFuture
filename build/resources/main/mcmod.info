@@ -1,0 +1,12 @@
+[
+  {
+    "modid": "industrial_future",
+    "name": "IndustrialFuture",
+    "description": "A simple mod for Minecraft 1.19.2",
+    "version": "0.1.0",
+    "mcversion": "1.19.2",
+    "authorList": ["Oddchew"],
+    "url": "",
+    "credits": "Thanks to Forge"
+  }
+]

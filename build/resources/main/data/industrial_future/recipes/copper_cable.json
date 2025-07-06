@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "mechanism",
+  "pattern": [
+    "RRR",
+    "CCC",
+    "RRR"
+  ],
+  "key": {
+    "R": {
+      "item": "industrial_future:rubber"
+    },
+    "C": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "result": {
+    "item": "industrial_future:copper_cable",
+    "count": 3
+  }
+}

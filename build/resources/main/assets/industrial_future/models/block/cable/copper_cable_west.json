@@ -1,0 +1,22 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "industrial_future:block/cable/copper_cable_center",
+    "end": "industrial_future:block/cable/copper_cable_center",
+    "side": "industrial_future:block/cable/copper_cable_side"
+  },
+  "elements": [
+    {
+      "from": [0, 5, 5],
+      "to": [5, 11, 11],
+      "faces": {
+        "east": { "texture": "#end" },
+        "west": { "texture": "#end" },
+        "north": { "texture": "#side" },
+        "south": { "texture": "#side" },
+        "up": { "texture": "#side" },
+        "down": { "texture": "#side" }
+      }
+    }
+  ]
+}

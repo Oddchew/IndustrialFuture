@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Specification-Title: industrial_future
+Specification-Vendor: Oddchew
+Specification-Version: 1
+Implementation-Title: 1.19.2
+Implementation-Version: 1.0.0
+Implementation-Vendor: Oddchew
+Implementation-Timestamp: 2025-06-23T03:27:06+0300
+

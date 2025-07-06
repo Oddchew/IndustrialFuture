@@ -1,0 +1,21 @@
+modLoader="javafml"
+loaderVersion="43.5.0"
+license="All Rights Reserved"
+[[mods]]
+modId="industrial_future"
+version="0.1.0"
+displayName="Industrial Future"
+description="A mod adding industrial features"
+authors="Oddchew"
+[[dependencies.industrial_future]]
+modId="forge"
+mandatory=true
+versionRange="[43,)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.industrial_future]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.19.2,1.20)"
+ordering="NONE"
+side="BOTH"

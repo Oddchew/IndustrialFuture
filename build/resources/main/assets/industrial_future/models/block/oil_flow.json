@@ -1,0 +1,6 @@
+{
+  "parent": "block/liquid",
+  "textures": {
+    "layer0": "industrial_future:block/oil_flow"
+  }
+}

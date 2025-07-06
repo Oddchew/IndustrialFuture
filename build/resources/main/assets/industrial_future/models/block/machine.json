@@ -1,0 +1,8 @@
+{
+  "parent": "block/orientable",
+  "textures": {
+    "top": "industrial_future:block/machine_top",
+    "front": "industrial_future:block/machine_front",
+    "side": "industrial_future:block/machine_side"
+  }
+}

@@ -1,0 +1,187 @@
+---- Minecraft Crash Report ----
+// Don't do that.
+
+Time: 2025-06-20 11:17:12
+Description: Unexpected error
+
+java.lang.NullPointerException: Cannot read field "isClientSide" because "level" is null
+	at by.oddchew.IndustrialFuture.blockentity.CableBlockEntity.tick(CableBlockEntity.java:26) ~[main/:?] {re:classloading}
+	at by.oddchew.IndustrialFuture.blockentity.CableBlockEntity.<init>(CableBlockEntity.java:22) ~[main/:?] {re:classloading}
+	at by.oddchew.IndustrialFuture.blocks.CableBlock.newBlockEntity(CableBlock.java:84) ~[main/:?] {re:classloading}
+	at net.minecraft.world.level.chunk.LevelChunk.setBlockState(LevelChunk.java:255) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar:?] {re:classloading}
+	at net.minecraft.world.level.Level.setBlock(Level.java:211) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.multiplayer.ClientLevel.setBlock(ClientLevel.java:158) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.world.level.Level.setBlock(Level.java:188) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.item.BlockItem.placeBlock(BlockItem.java:161) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar:?] {re:classloading}
+	at net.minecraft.world.item.BlockItem.place(BlockItem.java:66) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar:?] {re:classloading}
+	at net.minecraft.world.item.BlockItem.useOn(BlockItem.java:46) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar:?] {re:classloading}
+	at net.minecraft.world.item.ItemStack.lambda$useOn$5(ItemStack.java:237) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar:?] {re:classloading,xf:fml:forge:itemstack}
+	at net.minecraft.world.item.ItemStack.onItemUse(ItemStack.java:252) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar:?] {re:classloading,xf:fml:forge:itemstack}
+	at net.minecraft.world.item.ItemStack.useOn(ItemStack.java:237) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar:?] {re:classloading,xf:fml:forge:itemstack}
+	at net.minecraft.client.multiplayer.MultiPlayerGameMode.performUseItemOn(MultiPlayerGameMode.java:352) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.multiplayer.MultiPlayerGameMode.lambda$useItemOn$4(MultiPlayerGameMode.java:312) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.multiplayer.MultiPlayerGameMode.startPrediction(MultiPlayerGameMode.java:252) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.multiplayer.MultiPlayerGameMode.useItemOn(MultiPlayerGameMode.java:311) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.startUseItem(Minecraft.java:1671) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.handleKeybinds(Minecraft.java:1953) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.tick(Minecraft.java:1768) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1078) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.run(Minecraft.java:700) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.run(Main.java:212) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:51) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?] {}
+	at net.minecraftforge.fml.loading.targets.ForgeClientUserdevLaunchHandler.lambda$launchService$0(ForgeClientUserdevLaunchHandler.java:25) ~[fmlloader-1.19.2-43.5.0.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:108) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Suspected Mod: 
+	IndustrialFuture (industrial_future), Version: 1.0.0
+		at TRANSFORMER/industrial_future@1.0.0/by.oddchew.IndustrialFuture.blockentity.CableBlockEntity.tick(CableBlockEntity.java:26)
+Stacktrace:
+	at by.oddchew.IndustrialFuture.blockentity.CableBlockEntity.tick(CableBlockEntity.java:26) ~[%23196!/:?] {re:classloading}
+	at by.oddchew.IndustrialFuture.blockentity.CableBlockEntity.<init>(CableBlockEntity.java:22) ~[%23196!/:?] {re:classloading}
+	at by.oddchew.IndustrialFuture.blocks.CableBlock.newBlockEntity(CableBlock.java:84) ~[%23196!/:?] {re:classloading}
+	at net.minecraft.world.level.chunk.LevelChunk.setBlockState(LevelChunk.java:255) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.level.Level.setBlock(Level.java:211) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.multiplayer.ClientLevel.setBlock(ClientLevel.java:158) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar%23191!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.world.level.Level.setBlock(Level.java:188) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.item.BlockItem.placeBlock(BlockItem.java:161) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.item.BlockItem.place(BlockItem.java:66) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.item.BlockItem.useOn(BlockItem.java:46) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.item.ItemStack.lambda$useOn$5(ItemStack.java:237) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar%23191!/:?] {re:classloading,xf:fml:forge:itemstack}
+	at net.minecraft.world.item.ItemStack.onItemUse(ItemStack.java:252) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar%23191!/:?] {re:classloading,xf:fml:forge:itemstack}
+	at net.minecraft.world.item.ItemStack.useOn(ItemStack.java:237) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar%23191!/:?] {re:classloading,xf:fml:forge:itemstack}
+	at net.minecraft.client.multiplayer.MultiPlayerGameMode.performUseItemOn(MultiPlayerGameMode.java:352) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar%23191!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.multiplayer.MultiPlayerGameMode.lambda$useItemOn$4(MultiPlayerGameMode.java:312) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar%23191!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.multiplayer.MultiPlayerGameMode.startPrediction(MultiPlayerGameMode.java:252) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar%23191!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.multiplayer.MultiPlayerGameMode.useItemOn(MultiPlayerGameMode.java:311) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar%23191!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.startUseItem(Minecraft.java:1671) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.handleKeybinds(Minecraft.java:1953) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+-- Affected level --
+Details:
+	All players: 1 total; [LocalPlayer['Dev'/13, l='ClientLevel', x=-12.95, y=-60.00, z=24.41]]
+	Chunk stats: 961, 609
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (0,-60,0), Section: (at 0,4,0 in 0,-4,0; chunk contains blocks 0,-64,0 to 15,319,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Level time: 149945 game time, 149945 day time
+	Server brand: forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.ClientLevel.fillReportDetails(ClientLevel.java:450) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.fillReport(Minecraft.java:2280) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.run(Minecraft.java:722) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.run(Main.java:212) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:51) ~[forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?] {}
+	at net.minecraftforge.fml.loading.targets.ForgeClientUserdevLaunchHandler.lambda$launchService$0(ForgeClientUserdevLaunchHandler.java:25) ~[fmlloader-1.19.2-43.5.0.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:108) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?] {}
+
+
+-- Last reload --
+Details:
+	Reload number: 1
+	Reload reason: initial
+	Finished: Yes
+	Packs: Default, Mod Resources
+
+-- System Details --
+Details:
+	Minecraft Version: 1.19.2
+	Minecraft Version ID: 1.19.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 21.0.7, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode, sharing), Oracle Corporation
+	Memory: 792419280 bytes (755 MiB) / 1461714944 bytes (1394 MiB) up to 4093640704 bytes (3904 MiB)
+	CPUs: 16
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD Ryzen 7 7735HS with Radeon Graphics        
+	Identifier: AuthenticAMD Family 25 Model 68 Stepping 1
+	Microarchitecture: Zen 3
+	Frequency (GHz): 3.19
+	Number of physical packages: 1
+	Number of physical CPUs: 8
+	Number of logical CPUs: 16
+	Graphics card #0 name: AMD Radeon(TM) Graphics
+	Graphics card #0 vendor: Advanced Micro Devices, Inc. (0x1002)
+	Graphics card #0 VRAM (MB): 512.00
+	Graphics card #0 deviceId: 0x1681
+	Graphics card #0 versionInfo: DriverVersion=32.0.11038.3
+	Graphics card #1 name: NVIDIA GeForce RTX 4060 Laptop GPU
+	Graphics card #1 vendor: NVIDIA (0x10de)
+	Graphics card #1 VRAM (MB): 4095.00
+	Graphics card #1 deviceId: 0x28e0
+	Graphics card #1 versionInfo: DriverVersion=32.0.15.6626
+	Memory slot #0 capacity (MB): 8192.00
+	Memory slot #0 clockSpeed (GHz): 5.60
+	Memory slot #0 type: Unknown
+	Memory slot #1 capacity (MB): 8192.00
+	Memory slot #1 clockSpeed (GHz): 5.60
+	Memory slot #1 type: Unknown
+	Virtual memory max (MB): 29362.08
+	Virtual memory used (MB): 22719.36
+	Swap memory total (MB): 13751.17
+	Swap memory used (MB): 933.18
+	JVM Flags: 2 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	Launched Version: MOD_DEV
+	Backend library: LWJGL version 3.3.1 build 7
+	Backend API: AMD Radeon(TM) Graphics GL version 3.2.0 Core Profile Context 24.10.38.240812, ATI Technologies Inc.
+	Window size: 854x480
+	GL Caps: Using framebuffer using OpenGL 3.2
+	GL debug messages: 
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'forge'; Server brand changed to 'forge'
+	Type: Integrated Server (map_client.txt)
+	Graphics mode: fancy
+	Resource Packs: 
+	Current Language: Русский (Россия)
+	CPU: 16x AMD Ryzen 7 7735HS with Radeon Graphics 
+	Server Running: true
+	Player Count: 1 / 8; [ServerPlayer['Dev'/13, l='ServerLevel[Новый мир]', x=-12.95, y=-60.00, z=24.41]]
+	Data Packs: vanilla, mod:forge, mod:industrial_future (incompatible)
+	World Generation: Stable
+	ModLauncher: 10.0.9+10.0.9+main.dcd20f30
+	ModLauncher launch target: forgeclientuserdev
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		mixin-0.8.5.jar mixin PLUGINSERVICE 
+		eventbus-6.0.3.jar eventbus PLUGINSERVICE 
+		fmlloader-1.19.2-43.5.0.jar slf4jfixer PLUGINSERVICE 
+		fmlloader-1.19.2-43.5.0.jar object_holder_definalize PLUGINSERVICE 
+		fmlloader-1.19.2-43.5.0.jar runtime_enum_extender PLUGINSERVICE 
+		fmlloader-1.19.2-43.5.0.jar capability_token_subclass PLUGINSERVICE 
+		accesstransformers-8.0.4.jar accesstransformer PLUGINSERVICE 
+		fmlloader-1.19.2-43.5.0.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-10.0.9.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-10.0.9.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		minecraft@1.0
+		lowcodefml@null
+		javafml@null
+	Mod List: 
+		forge-1.19.2-43.5.0_mapped_official_1.19.2-recomp.|Minecraft                     |minecraft                     |1.19.2              |DONE      |Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		                                                  |Forge                         |forge                         |43.5.0              |DONE      |Manifest: NOSIGNATURE
+		main                                              |IndustrialFuture              |industrial_future             |1.0.0               |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: 8e564fdf-ecff-4755-82d3-0e447fd4ef28
+	FML: 43.5
+	Forge: net.minecraftforge:43.5.0

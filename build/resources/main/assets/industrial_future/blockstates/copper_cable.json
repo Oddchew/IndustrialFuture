@@ -1,0 +1,29 @@
+{
+  "multipart": [
+    { "apply": { "model": "industrial_future:block/cable/copper_cable_center" } },
+    {
+      "when": { "connected_north": true },
+      "apply": { "model": "industrial_future:block/cable/copper_cable_north" }
+    },
+    {
+      "when": { "connected_south": true },
+      "apply": { "model": "industrial_future:block/cable/copper_cable_south" }
+    },
+    {
+      "when": { "connected_east": true },
+      "apply": { "model": "industrial_future:block/cable/copper_cable_east" }
+    },
+    {
+      "when": { "connected_west": true },
+      "apply": { "model": "industrial_future:block/cable/copper_cable_west" }
+    },
+    {
+      "when": { "connected_up": true },
+      "apply": { "model": "industrial_future:block/cable/copper_cable_up" }
+    },
+    {
+      "when": { "connected_down": true },
+      "apply": { "model": "industrial_future:block/cable/copper_cable_down" }
+    }
+  ]
+}
