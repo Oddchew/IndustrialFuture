@@ -3,22 +3,18 @@ package by.oddchew.IndustrialFuture.fluid;
 import by.oddchew.IndustrialFuture.IndustrialFuture;
 import by.oddchew.IndustrialFuture.fluid.custom.OilFluidType;
 import by.oddchew.IndustrialFuture.fluid.custom.PetroleumFluedType;
+import by.oddchew.IndustrialFuture.items.ModItems;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.fluids.FluidType;
 import net.minecraftforge.fluids.ForgeFlowingFluid;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraft.world.level.block.Block;
-
-import static by.oddchew.IndustrialFuture.items.OilBucketRegistry.OIL_BUCKET;
-import static by.oddchew.IndustrialFuture.items.PetroleumBucketRegistry.PETROLEUM_BUCKET;
-
 
 public class ModFluids {
     public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(ForgeRegistries.FLUIDS, IndustrialFuture.MODID);
@@ -42,7 +38,7 @@ public class ModFluids {
 
     public static final ForgeFlowingFluid.Properties OIL_PROPERTIES = new ForgeFlowingFluid.Properties(
             OIL_FLUID_TYPE, OIL_SOURCE, OIL_FLOWING)
-            .bucket(OIL_BUCKET)
+            .bucket(ModItems.OIL_BUCKET)
             .block(OIL_BLOCK);
 
 
@@ -63,7 +59,7 @@ public class ModFluids {
 
     public static final ForgeFlowingFluid.Properties PETROLEUM_PROPERTIES = new ForgeFlowingFluid.Properties(
             PETROLEUM_FLUID_TYPE, PETROLEUM_SOURCE, PETROLEUM_FLOWING)
-            .bucket(PETROLEUM_BUCKET)
+            .bucket(ModItems.PETROLEUM_BUCKET)
             .block(PETROLEUM_BLOCK);
 }
 
