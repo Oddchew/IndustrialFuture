@@ -2,7 +2,6 @@ package by.oddchew.IndustrialFuture.event;
 
 import by.oddchew.IndustrialFuture.IndustrialFuture;
 import by.oddchew.IndustrialFuture.blocks.ModBlocks;
-import by.oddchew.IndustrialFuture.blocks.SulfurOre;
 import by.oddchew.IndustrialFuture.fluid.ModFluids;
 import by.oddchew.IndustrialFuture.menu.ModMenuTypes;
 import by.oddchew.IndustrialFuture.menu.screen.CrusherScreen;
@@ -21,8 +20,8 @@ public class ClientEventHandler {
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.DANDELION_CROP.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(SulfurOre.SULFUR_ORE.get(), RenderType.solid());
-        ItemBlockRenderTypes.setRenderLayer(SulfurOre.DEEPSLATE_SULFUR_ORE.get(), RenderType.solid());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.SULFUR_ORE.get(), RenderType.solid());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DEEPSLATE_SULFUR_ORE.get(), RenderType.solid());
     }
 
     public static void onClientLiquids(FMLClientSetupEvent event) {

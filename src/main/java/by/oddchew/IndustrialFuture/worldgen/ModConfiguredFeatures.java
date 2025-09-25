@@ -1,17 +1,13 @@
 package by.oddchew.IndustrialFuture.worldgen;
 
-import by.oddchew.IndustrialFuture.blocks.SulfurOre;
-import by.oddchew.IndustrialFuture.blocks.TinOre;
+import by.oddchew.IndustrialFuture.blocks.ModBlocks;
 import com.google.common.base.Supplier;
 import com.google.common.base.Suppliers;
 import net.minecraft.core.Registry;
 import net.minecraft.data.worldgen.features.OreFeatures;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
-import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
-import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import by.oddchew.IndustrialFuture.IndustrialFuture;
@@ -25,8 +21,8 @@ public class ModConfiguredFeatures {
 
     // Конфигурации для серы (sulfur)
     public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_SULFUR_ORES = Suppliers.memoize(() -> List.of(
-            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, SulfurOre.SULFUR_ORE.get().defaultBlockState()),
-            OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, SulfurOre.DEEPSLATE_SULFUR_ORE.get().defaultBlockState())));
+            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.SULFUR_ORE.get().defaultBlockState()),
+            OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_SULFUR_ORE.get().defaultBlockState())));
     //public static final Supplier<List<OreConfiguration.TargetBlockState>> END_SULFUR_ORES = Suppliers.memoize(() -> List.of(
     //        OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE), InitBlocksL192.ENDSTONE_SULFUR_ORE.get().defaultBlockState()))); // Предполагается, что блок ENDSTONE_SULFUR_ORE определен
     //public static final Supplier<List<OreConfiguration.TargetBlockState>> NETHER_SULFUR_ORES = Suppliers.memoize(() -> List.of(
@@ -41,8 +37,8 @@ public class ModConfiguredFeatures {
 
     // Конфигурации для олова (tin)
     public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_TIN_ORES = Suppliers.memoize(() -> List.of(
-            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, TinOre.TIN_ORE.get().defaultBlockState()),
-            OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, TinOre.DEEPSLATE_TIN_ORE.get().defaultBlockState())));
+            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.TIN_ORE.get().defaultBlockState()),
+            OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_TIN_ORE.get().defaultBlockState())));
     //public static final Supplier<List<OreConfiguration.TargetBlockState>> END_TIN_ORES = Suppliers.memoize(() -> List.of(
     //        OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE), InitBlocksL192.ENDSTONE_TIN_ORE.get().defaultBlockState()))); // Предполагается, что блок ENDSTONE_SULFUR_ORE определен
     //public static final Supplier<List<OreConfiguration.TargetBlockState>> NETHER_TIN_ORES = Suppliers.memoize(() -> List.of(

@@ -2,7 +2,7 @@ package by.oddchew.IndustrialFuture.blocks;
 
 
 import by.oddchew.IndustrialFuture.IndustrialFuture;
-import by.oddchew.IndustrialFuture.blockentity.ElectricFurnaceEntity;
+import by.oddchew.IndustrialFuture.blocks.custom.SulfurOreBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -50,6 +50,33 @@ public class ModBlocks {
                     .randomTicks()
                     .instabreak()
                     .sound(SoundType.CROP)));
+
+    public static final RegistryObject<Block> SULFUR_ORE =
+            BLOCKS.register("sulfur_ore", () -> new SulfurOreBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(3.0F, 3.0F) // Твёрдость и сопротивление как у железной руды
+                    //.requiresCorrectToolForDrops() // Требуется правильный инструмент
+                    .sound(SoundType.STONE)
+            ));
+
+    public static final RegistryObject<Block> DEEPSLATE_SULFUR_ORE =
+            BLOCKS.register("deepslate_sulfur_ore", () -> new SulfurOreBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(4.5F, 6.0F) // Твёрже и устойчивее
+                    //.requiresCorrectToolForDrops()
+                    .sound(SoundType.DEEPSLATE)));
+
+    public static final RegistryObject<Block> TIN_ORE =
+            BLOCKS.register("tin_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(3.0F, 3.0F)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.STONE)
+            ));
+
+    public static final RegistryObject<Block> DEEPSLATE_TIN_ORE =
+            BLOCKS.register("deepslate_tin_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(3.0F, 3.0F)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.STONE)
+            ));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
