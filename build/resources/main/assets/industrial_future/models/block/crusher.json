@@ -1,8 +1,0 @@
-{
-  "parent": "block/orientable",
-  "textures": {
-    "top": "industrial_future:block/crusher_top",
-    "front": "industrial_future:block/crusher_front",
-    "side": "industrial_future:block/crusher_side"
-  }
-}

@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "industrial_future:block/dandelion/dandelion_crop_stage1"
-  }
-}
